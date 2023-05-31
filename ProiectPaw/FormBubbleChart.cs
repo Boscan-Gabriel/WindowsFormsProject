@@ -81,7 +81,7 @@ namespace AdmitereFacultate
 
         private Color GetRandomColor()
         {
-            Random random = new Random();
+            Random random = new Random(Guid.NewGuid().GetHashCode());
             return Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
         }
         private void pdPrint(object sender, PrintPageEventArgs e)
